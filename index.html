@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Emergencies - Who Do They Affect?</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="emergencyDataLoader.js" defer></script> <!-- Link to the csv loader-->
+    <script src="map.js" defer></script> <!-- Link to the main JavaScript file -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Text Box Above the Map -->
+        <div id="textBox">
+            <img src="images/Emergency_Light.gif" alt="Emergency Light GIF" width="45px" height="45px">
+            Emergency, Emergency! Paging Dr. America!
+            <img src="images/Emergency_Light.gif" alt="Emergency Light GIF" width="45px" height="45px">
+        </div>
+        <div id="subtextBox">Countries Directly Impacted or Mentioned in U.S. National Emergency Policy</div>
+
+        <!-- Map container -->
+        <div id="chartdiv"></div>
+        <div id="mapInfo">
+            Hover over for country counts and click for more information.
+        </div>
+        <!-- Further emergency data -->
+        <div id="infoBox">
+            <button id="closeBtn">X</button>
+            <div class="popupTitle" id="infoTitle"></div>
+            <div class="popupContent" id="infoContent"></div>
+            
+        </div>
+    </div>
+</body>
+</html>

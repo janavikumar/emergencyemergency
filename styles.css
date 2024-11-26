@@ -1,0 +1,92 @@
+/* styles.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textBox {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    margin-bottom: 5px; /* Space between text and map */
+    font-size: 28px;
+    color: #333;
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+}
+
+#subtextBox {
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 15px;
+    margin-bottom: 15px; 
+    font-size: 18px;
+    color: #333;
+    font-family: 'Orbitron', sans-serif; 
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+}
+
+#chartdiv {
+    width: 100%;
+    height: 500px;
+}
+
+#mapInfo {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#infoBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the box */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    max-width: 400px;
+    max-height: 300px;
+    overflow-y: auto; /* Make the box scrollable */
+    display: none; /* Initially hidden */
+    z-index: 10;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+#infoBox .popupContent {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#infoBox .popupTitle {
+    font-family: 'Orbitron', sans-serif !important; /* Orbitron for title */
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#infoBox button {
+    font-family: 'Orbitron', sans-serif; /* Orbitron for title */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #411d1d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#infoBox button:hover {
+    background-color: #af0000;
+}
