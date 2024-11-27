@@ -30,7 +30,7 @@ am5.ready(function() {
         })
     );
 
-    loadCSVData("emergencyData.csv", function (bubbleData){
+    loadCSVData("emergencydata.csv", function (bubbleData){
         bubbleData.forEach(data => {
             bubbleSeries.data.push({
                 geometry: {
