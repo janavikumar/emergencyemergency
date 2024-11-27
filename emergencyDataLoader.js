@@ -59,6 +59,7 @@ function parseCSV(csv) {
 }
 
 function formatMoreInfo(parsedData) {
+    if(!parsedData) return;
     parsedData.forEach((row) => {
         row.MoreInfo = row.MoreInfo.replace(/\\n\\n/g, "\n\n").split("\n\n");
     });
