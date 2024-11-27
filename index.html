@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,16 @@
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="emergencyDataLoader.js" defer></script> <!-- Link to the csv loader-->
     <script src="map.js" defer></script> <!-- Link to the main JavaScript file -->
+    <script src="graph.js" defer></script> <!-- Link to the main JavaScript file -->
+    <script src="chart.js" defer></script> <!-- Link to the main JavaScript file -->
+    <script src="scripts.js" defer></script> <!--Link to scripts-->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <!-- Text Box Above the Map -->
@@ -23,18 +32,47 @@
         </div>
         <div id="subtextBox">Countries Directly Impacted or Mentioned in U.S. National Emergency Policy</div>
 
-        <!-- Map container -->
-        <div id="chartdiv"></div>
-        <div id="mapInfo">
-            Hover over for country counts and click for more information.
+        <div id="scrollytime" style="display: flex">
+            <!-- Article Section-->
+            <div class="article">
+                <section id="section-1"></section>
+                <section id="section-2"></section>
+                <section id="section-3"></section>
+            </div>
+
+            <!-- Map container -->
+            <div id="visualizations">
+                <div id="v1" class="visual active">
+                    <div id="chartdiv"></div>
+                    <div id="mapInfo">
+                        Hover over for country counts and click for more information.
+                    </div>
+                </div>
+                <div id="v2" class="visual">
+                    <div id="chartdiv2"></div>
+                    <div id="mapInfo">
+                        Hover over for country counts and click for more information.
+                    </div>
+                </div>
+                <div id="v3" class="visual">
+                    <div id="chartdiv3"></div>
+                    <div id="mapInfo">
+                        Hover over for country counts and click for more information.
+                    </div>
+                </div>                
+
+            </div>
         </div>
+
+
         <!-- Further emergency data -->
         <div id="infoBox">
             <button id="closeBtn">X</button>
             <div class="popupTitle" id="infoTitle"></div>
             <div class="popupContent" id="infoContent"></div>
-            
+
         </div>
     </div>
 </body>
+
 </html>
