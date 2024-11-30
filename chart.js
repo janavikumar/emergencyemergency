@@ -211,21 +211,18 @@ am5.ready(function () {
     }
 
     // Initialize the chart with the first year's data
-    updateChart();
-
-    // Make chart responsive
-    chart.appear(100, 0);
-
-    // Function to start or restart the chart animation
     function startChart() {
         currentIndex = 0; // Reset the index to 0
         clearInterval(interval); // Clear any existing interval
-        interval = setInterval(updateChart, 3000); // Restart the animation
+        interval = setInterval(updateChart, 175); // Restart the animation with new interval
     }
 
     // Add replay button functionality
     document.getElementById("replayButton").addEventListener("click", startChart);
 
     // Start the chart animation initially
-    interval = setInterval(updateChart, 175);
+    startChart(); // Now start chart animation directly here
+
+    // Make chart responsive
+    chart.appear(3000, 0);
 });
