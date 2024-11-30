@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="emergencyDataLoader.js" defer></script> <!-- Link to the csv loader-->
@@ -50,8 +51,9 @@
                 </div>
                 <div id="v2" class="visual">
                     <div id="chartdiv2"></div>
+                    <button id="replayButton">Replay</button>
                     <div id="mapInfo">
-                        Hover over for country counts and click for more information.
+                        Number of National Emergencies that Presidents Have Declared in the US
                     </div>
                 </div>
                 <div id="v3" class="visual">
