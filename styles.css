@@ -21,7 +21,8 @@
 }
 
 .article section {
-    margin-bottom: 200px; /* Add space to see the effect while scrolling */
+    margin-bottom: 200px;
+    /* Add space to see the effect while scrolling */
     font-size: 20px;
 }
 
@@ -33,7 +34,8 @@
 .visual {
     width: 100%;
     height: 100vh;
-    margin: 10px 0; /* Add some space between the maps */
+    margin: 10px 0;
+    /* Add some space between the maps */
 }
 
 
@@ -46,24 +48,27 @@
 }
 
 #textBox {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Semi-transparent background */
     padding: 10px;
-    margin-bottom: 5px; /* Space between text and map */
+    margin-bottom: 5px;
+    /* Space between text and map */
     font-size: 28px;
     color: #333;
-    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-family: 'Orbitron', sans-serif;
+    /* Apply Orbitron font */
     border-radius: 5px;
     text-align: center;
     width: 80%;
 }
 
 #subtextBox {
-    background-color: rgba(255, 255, 255, 0.7); 
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
     font-size: 18px;
     color: #333;
-    font-family: 'Orbitron', sans-serif; 
+    font-family: 'Orbitron', sans-serif;
     border-radius: 5px;
     text-align: center;
     width: 80%;
@@ -95,7 +100,8 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the box */
+    transform: translate(-50%, -50%);
+    /* Center the box */
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
@@ -104,8 +110,10 @@
     font-size: 16px;
     max-width: 400px;
     max-height: 300px;
-    overflow-y: auto; /* Make the box scrollable */
-    display: none; /* Initially hidden */
+    overflow-y: auto;
+    /* Make the box scrollable */
+    display: none;
+    /* Initially hidden */
     z-index: 10;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
@@ -117,14 +125,16 @@
 }
 
 #infoBox .popupTitle {
-    font-family: 'Orbitron', sans-serif !important; /* Orbitron for title */
+    font-family: 'Orbitron', sans-serif !important;
+    /* Orbitron for title */
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
 #infoBox button {
-    font-family: 'Orbitron', sans-serif; /* Orbitron for title */
+    font-family: 'Orbitron', sans-serif;
+    /* Orbitron for title */
     position: absolute;
     top: 10px;
     right: 10px;
@@ -139,4 +149,43 @@
 
 #infoBox button:hover {
     background-color: #af0000;
+}
+
+/* Style for the replay button */
+#replayButton {
+    background-color: #7d6974;
+    /* Green background */
+    color: white;
+    /* White text */
+    font-size: 14px;
+    /* Slightly larger text */
+    font-weight: bold;
+    /* Bold text */
+    padding: 5px 10px;
+    /* Adequate padding */
+    border: none;
+    /* Remove default border */
+    border-radius: 8px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+/* Hover effect */
+#replayButton:hover {
+    background-color: #473f44;
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+/* Active effect (when clicked) */
+#replayButton:active {
+    transform: translateY(0);
+    /* Button goes back to normal position */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Lighter shadow when pressed */
 }

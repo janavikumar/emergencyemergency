@@ -56,7 +56,8 @@ am5.ready(function () {
 
     // Set colors for each bar
     series.columns.template.adapters.add("fill", function (fill, target) {
-        return chart.get("colors").getIndex(series.dataItems.indexOf(target.dataItem));
+        let reversedIndex = series.dataItems.length - series.dataItems.indexOf(target.dataItem) - 1;
+        return chart.get("colors").getIndex(reversedIndex);
     });
 
     // Sample dataset
@@ -179,7 +180,7 @@ am5.ready(function () {
             fontWeight: "bold",
             x: am5.p50,
             centerX: am5.p50,
-            y: -20
+            y: -25
         })
     );
 
@@ -195,6 +196,9 @@ am5.ready(function () {
         }
 
         let currentData = presidentDataset[currentIndex];
+
+        // Sort the data by value (longest to shortest)
+        currentData.data.sort((a, b) => b.value - a.value);
 
         // Update the year label
         yearLabel.set("text", "As of: " + String(currentData.year));
@@ -216,12 +220,12 @@ am5.ready(function () {
     function startChart() {
         currentIndex = 0; // Reset the index to 0
         clearInterval(interval); // Clear any existing interval
-        interval = setInterval(updateChart, 500); // Restart the animation
+        interval = setInterval(updateChart, 3000); // Restart the animation
     }
 
     // Add replay button functionality
     document.getElementById("replayButton").addEventListener("click", startChart);
 
     // Start the chart animation initially
-    interval = setInterval(updateChart, 100);
+    interval = setInterval(updateChart, 175);
 });
