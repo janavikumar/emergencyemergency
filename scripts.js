@@ -3,7 +3,12 @@ function loadSectionContent(sectionId, filePath) {
     fetch(filePath)
         .then((response) => response.text())
         .then((data) => {
-            document.getElementById(sectionId).innerHTML = data;
+            // Split text by \n\n and wrap each segment in a <p> tag
+            const formattedData = data
+                .split(/\n\n/)
+                .map(paragraph => `<p>${paragraph.trim()}</p>`)
+                .join('');
+            document.getElementById(sectionId).innerHTML = formattedData;
         })
         .catch((error) => console.error('Error loading content:', error));
 }
