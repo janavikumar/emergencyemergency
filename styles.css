@@ -189,3 +189,52 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* Lighter shadow when pressed */
 }
+
+/* Quarter-Circle Banner */
+.corner-banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px; /* Adjust size if needed */
+    height: 150px;
+    background: rgba(0, 123, 255, 0.5); /* Transparent blue */
+    border-bottom-left-radius: 150px; /* Creates the quarter-circle */
+    display: flex;
+    align-items: flex-start; /* Align content to the top-left */
+    justify-content: flex-end; /* Align content to the right */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  }
+  
+  /* Content inside the quarter-circle */
+  .corner-content {
+    position: relative;
+    text-align: right; /* Align text to the right */
+    width: 100%;
+  }
+  
+  /* Text styling */
+  .corner-content p {
+    margin: 30px 0;
+    font-size: 12px;
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(2, 10, 154);
+    line-height: 1.5;
+  }
+  
+  /* Close Button */
+  .corner-close-btn {
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgba(0, 123, 255, 0.5);
+  }
+  
+  .corner-close-btn:hover {
+    color: #f90000; /* Highlight color on hover */
+  }

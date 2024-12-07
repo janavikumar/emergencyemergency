@@ -46,5 +46,11 @@ scroller
         activateMap(index); // Change the map based on the section
     });
 
+// function for handling close button
+function closeBanner() {
+    const banner = document.querySelector('.corner-banner');
+    banner.style.display = 'none';
+}
+
 // Handle window resizing
 window.addEventListener("resize", scroller.resize);
