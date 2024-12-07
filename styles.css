@@ -1,4 +1,25 @@
 /* styles.css */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes whooshInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); /* Start far off-screen to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move to its final position */
+    }
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -52,6 +73,7 @@
 }
 
 #textBox {
+    animation: fade-in 5s;
     padding: 10px;
     margin-bottom: 5px;
     /* Space between text and map */
@@ -65,6 +87,7 @@
 }
 
 #subtextBox {
+    animation: fade-in 8s;
     padding: 15px;
     margin-bottom: 15px;
     font-size: 18px;
@@ -76,16 +99,22 @@
 }
 
 #chartdiv {
+    animation: whooshInFromRight 1s ease-out;
+    opacity: 1;
     width: 100%;
     height: 400px;
 }
 
 #chartdiv2 {
+    animation: whooshInFromRight 1s ease-out;
+    opacity: 1;
     width: 75%;
     height: 400px;
 }
 
 #chartdiv3 {
+    animation: whooshInFromRight 1s ease-out;
+    opacity: 1;
     width: 75%;
     height: 400px;
 }
@@ -100,7 +129,7 @@
 #infoBox {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 75%;
     transform: translate(-50%, -50%);
     /* Center the box */
     padding: 20px;
@@ -132,8 +161,7 @@
     font-size: 18px;
     margin-bottom: 10px;
 }
-
-#infoBox button {
+#closeBtn {
     font-family: 'Orbitron', sans-serif;
     /* Orbitron for title */
     position: absolute;
@@ -148,7 +176,7 @@
     font-size: 14px;
 }
 
-#infoBox button:hover {
+#closeBtn button:hover {
     background-color: #af0000;
 }
 
