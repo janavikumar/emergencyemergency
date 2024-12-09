@@ -13,10 +13,13 @@ loadSectionContent("section-1", "article/ArticlePart1.txt");
 loadSectionContent("section-1_2", "article/article1_2.txt");
 loadSectionContent("section-1_3", "article/article1_3.txt");
 loadSectionContent("section-1_4", "article/article1_4.txt");
+loadSectionContent("section-1_5", "article/article1_5.txt");
 loadSectionContent("section-2", "article/ArticlePart2.txt");
 loadSectionContent("section-2_2", "article/article2_2.txt");
-loadSectionContent("section-2_3", "article/article2_3.txt");
 loadSectionContent("section-3", "article/ArticlePart3.txt");
+loadSectionContent("section-3_2", "article/article3_2.txt");
+loadSectionContent("section-3_3", "article/article3_3.txt");
+
 
 // Initialize Scrollama
 const scroller = scrollama();
@@ -30,13 +33,13 @@ const visualizations = [
 
 // Function to activate a map
 function activateMap(index) {
-    if (index <= 3 ) {
+    if (index <= 4 ) {
         visualizations[0].classList.add("active"); // Show the first map
         visualizations[1].classList.remove("active"); // Hide the second map
         visualizations[2].classList.remove("active"); // Hide the third map
     }
     // Show map 2 for the third section
-    else if (index > 3 && index < 7) {
+    else if (index > 4 && index < 7) {
         visualizations[0].classList.remove("active"); // Hide the first map
         visualizations[1].classList.add("active"); // Show the second map
         visualizations[2].classList.remove("active"); // Hide the third map
